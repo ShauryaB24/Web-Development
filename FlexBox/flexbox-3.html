@@ -1,0 +1,81 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    *{
+        font-size: 30px;
+        text-align: center;
+        color: white;
+        font-weight: 600;
+        font-family: monospace;
+    }
+    .container{
+        display: flex;
+        margin: 15px;
+        height: 100vh;
+    }
+    .nav{
+        flex-grow: 1;
+        background-color:rgb(250, 214, 161);
+    }
+    p{
+        background-color: indigo;
+    }
+    .main{
+        display: flex;
+        flex-direction: column;
+        flex-grow: 4;
+    }
+    .header,.footer{
+        padding: 12px;
+        flex-grow: 1;
+        background-color:indigo;
+    }
+    .article{
+        padding: 12px;
+        background-color: rgb(191, 137, 230);
+        flex-grow: 3;
+    }
+    ul{
+        list-style-type:none;
+        padding-inline-start: 0px;
+    }
+    li{
+        padding:0.5em 0em 0.5em 1em;
+        text-align: left;
+    }
+    a{
+        text-decoration: none;
+        font-size: 1rem;
+        color:black;
+    }
+    li:focus, 
+    li:hover{
+        background-color: rgb(245, 245, 245);
+        border-left:4px solid indigo;
+    }
+    </style>
+</head>
+<body>
+    <body>
+        <div class="container">
+            <div class="nav">
+                <p class="para">Nav</p>
+                <ul>
+                    <li><a href="#">HOME</a></li>
+                    <li><a href="#">ABOUT</a></li>
+                    <li><a href="#">CONTACT</a></li>
+                </ul>
+            </div>
+            <div class="main">
+                <div class="header">Header</div>
+                <div class="article">Article</div>
+                <div class="footer">Footer</div>
+            </div>
+        </div>
+    </body>
+</body>
+</html>
