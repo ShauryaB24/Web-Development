@@ -1,0 +1,63 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>grid css</title>
+    <style>
+        .container{
+            display: grid;
+            grid-template-columns: repeat(auto-fill ,minmax(200px,1fr)); /*repeat{4, 1fr} fr-fraction*/
+            grid-gap: 20px;
+            grid-auto-rows: 200px;      /*minmax(100px,auto)*/
+            grid-auto-columns: 50px;
+            /*column-gap: 200px;
+            row-gap: 200px;*/
+        }
+
+        .items{
+            background-color: lightcoral;
+            border: 3px green solid;
+            border-radius: 3px;
+        }
+
+        /*#item2{
+            grid-row-start: 2;
+            grid-row-end: 3;
+            grid-column-start: 2;
+            grid-column-end: 3;
+
+        }
+        */
+        #item1{
+            grid-column-start: 1;
+            grid-column-end: -1;
+        }
+
+        .item1-conatiner{
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+
+        }
+        .nesting{
+            border: 3px greenyellow solid;
+            background-color: lightcyan;
+            border-radius: 3px;
+
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="items item1-conatiner" id="item1">
+            <div class="nesting">box inside box 1</div>
+            <div class="nesting">box inside box 2</div>
+            <div class="nesting">box inside box 3</div>
+        </div>
+        <div class="items" id="item2">box 2</div>
+        <div class="items">box 3</div>
+        <div class="items">box 4</div>
+        <div class="items">box 5</div>
+    </div>
+</body>
+</html>
